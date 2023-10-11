@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: rgb(0, 213, 255);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    height: 100vh;
+
+}
+
+.container {
+    position: relative;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.addtask {
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+
+.addtask>input[type='text'] {
+    width: 90%;
+    color: #333;
+    border: none;
+    border-bottom: 2px solid #666;
+    background: none;
+    padding: 10px;
+    font-size: 22px;
+    outline: none;
+}
+
+.addtask button {
+    margin: 0 10px;
+    color: #fff;
+    background: #222;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3em;
+    outline: none;
+}
+
+.notcompleted,
+.completed {
+    margin: 5px 0;
+    padding: 20px;
+}
+
+h3 {
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+
+ol {
+    list-style: none;
+    counter-reset: my-counter;
+}
+
+ol li {
+    width: 100%;
+    padding: 18px;
+    margin: 5px 0;
+    background: blueviolet;
+    counter-increment: my-counter;
+}
+
+ol.completed li {
+    background: rgb(4, 255, 4);
+}
+
+ol li::before {
+    content: counter(my-counter);
+    background-color: orangered;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    align-items: center;
+    display: inline-block;
+    text-align: center;
+    line-height: 2rem;
+    color: white;
+    margin-right: 0.5rem;
+}
+
+li button {
+    float: right;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 15px;
+    margin-right: 15px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
